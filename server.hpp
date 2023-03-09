@@ -6,7 +6,7 @@
 /*   By: ibenmain <ibenmain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 18:48:03 by ibenmain          #+#    #+#             */
-/*   Updated: 2023/03/08 20:13:00 by ibenmain         ###   ########.fr       */
+/*   Updated: 2023/03/09 16:51:55 by ibenmain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,17 @@ class server
 {
 private:
     struct sockaddr_in  serv_add;
+    int	socket_serv;
+	int bind_result;
+    int on;
+    int nfd;
+    int close_conne;
+    struct pollfd fds[1024];
     /* --Structures for handling internet addresses-- */
 public:
     server();
     ~server();
-    void    runServer();
+    void    runServer(char **av);
 };
 void	ft_print_err(std::string str);
 #endif
