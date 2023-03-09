@@ -6,7 +6,7 @@
 /*   By: ibenmain <ibenmain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 18:48:03 by ibenmain          #+#    #+#             */
-/*   Updated: 2023/03/09 16:51:55 by ibenmain         ###   ########.fr       */
+/*   Updated: 2023/03/09 23:12:57 by ibenmain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ private:
     int nfd;
     int close_conne;
     struct pollfd fds[1024];
-    /* --Structures for handling internet addresses-- */
 public:
     server();
     ~server();
